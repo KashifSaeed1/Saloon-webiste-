@@ -1,0 +1,43 @@
+.page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #111827;
+  padding-bottom:48px;
+}
+
+.page-header {
+  background: linear-gradient(90deg,#fff 0%, #fffaf6 100%);
+  padding:40px 20px;
+  text-align:center;
+  box-shadow: 0 6px 24px rgba(16,24,40,0.04);
+}
+
+.page-header h1 { font-size:2rem; margin:0 0 8px; color:#111827 }
+.page-header p { color:#6b7280; margin:0 }
+
+.page-content { max-width:900px; margin:26px auto; padding:0 18px; }
+
+/* Feature list */
+.features-page .page-content ul { list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px }
+.features-page .page-content li { background:#fff; padding:18px; border-radius:12px; box-shadow:0 8px 30px rgba(16,24,40,0.06); font-weight:600 }
+
+/* About */
+.about-page .page-content p { line-height:1.6; color:#374151 }
+
+/* Contact form */
+.contact-form { display:flex; flex-direction:column; gap:12px; max-width:640px; margin:0 auto }
+.contact-form label { display:flex; flex-direction:column; gap:8px; font-weight:600; color:#374151 }
+.contact-form input,
+.contact-form textarea { padding:10px 12px; border-radius:10px; border:1px solid #e6e7eb; background:#fff; font-size:0.95rem }
+.contact-form textarea { min-height:120px; resize:vertical }
+.form-actions { display:flex; gap:12px; align-items:center }
+.form-actions .status { color:#6b7280 }
+
+/* Buttons fallback for pages (uses .btn from App.css) */
+.btn { display:inline-block; text-decoration:none; padding:10px 14px; border-radius:10px }
+.btn.primary { background: linear-gradient(90deg,#ff7ab6,#ff4d79); color:#fff }
+.btn.outline { background:transparent; border:1px solid #e5e7eb; color:#111827 }
+
+@media (max-width:640px) {
+  .page-header { padding:28px 12px }
+  .page-header h1 { font-size:1.5rem }
+}

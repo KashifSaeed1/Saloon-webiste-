@@ -1,17 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import './Landing.css';
 
 export default function Landing() {
   return (
     <div className="landing">
+      <nav className="site-nav">
+        <div className="nav-brand">
+          <Link to="/" className="brand">Get the Glow</Link>
+        </div>
+        <div className="nav-links">
+          <Link to="/features">Services</Link>
+          <Link to="/about">About</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
+      </nav>
+
       <header className="hero">
         <div className="hero-content">
           <h1 className="brand">Get the Glow</h1>
           <p className="tag">Glow-up treatments & stunning styles.</p>
           <div className="cta-row">
-            <a className="btn primary" href="#book">Book Now</a>
-            <a className="btn outline" href="#services">Our Services</a>
+            <Link className="btn primary" to="/contact">Book Now</Link>
+            <Link className="btn outline" to="/features">Our Services</Link>
           </div>
         </div>
       </header>
@@ -32,12 +44,16 @@ export default function Landing() {
             <p>Event makeup and finishing touches.</p>
           </div>
         </div>
+        <div className="more-link">
+          <Link to="/features" className="btn outline">See all services</Link>
+        </div>
       </section>
 
       <section id="book" className="booking">
         <h2>Ready to get glowing?</h2>
         <p>Call us or request an appointment online. Walk-ins welcome.</p>
         <a className="btn primary large" href="tel:+1234567890">Call +1 (234) 567-890</a>
+        <Link className="btn" to="/contact">Request Appointment</Link>
       </section>
 
       <footer className="site-footer">
